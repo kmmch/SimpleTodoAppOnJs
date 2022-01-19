@@ -130,7 +130,7 @@
 /**
  * mapやfilterを使った配列の処理
  */
-const nameArr = ["masaya", "kemmochi", "じゃけぇ"];
+// const nameArr = ["masaya", "kemmochi", "じゃけぇ"];
 // for (let index=0; index<nameArr.length; index++) {
 //   console.log(nameArr[index]);
 // }
@@ -181,3 +181,33 @@ const nameArr = ["masaya", "kemmochi", "じゃけぇ"];
 //   return num1 + num2 > 100 ? '100を超えています' : '許容範囲ないです。';
 // }
 // console.log(checkSum(50,40));
+
+/**
+ *
+ */
+
+/**
+ * 論理演算子の本当の意味を知ろう && ||
+ */
+// const flag1 = true;
+// const flag2 = true;
+
+// if(flag1 || flag2) {
+//   console.log('1または2はtrueです。');
+// }
+
+// if(flag1 && flag2) {
+//   console.log('1も2もtrueです。');
+// }
+
+// -> または、かつ、という意味ではない！
+
+// const num = null;
+// const fee = num || "金額未設定";
+// console.log(fee);
+// || は左側がfalseの時に右側を返す
+
+// const num2 = 100;
+// const fee2 = num2 && "金額設定中";
+// console.log(fee2);
+// && は左側がtrueの時に右側を返す
