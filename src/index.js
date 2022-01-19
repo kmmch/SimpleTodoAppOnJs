@@ -12,6 +12,10 @@
 // const message2 = `私の名前は${name}です。年齢は${age}です。`;
 // console.log(message2);
 
+/**
+ *
+ */
+
 /*
  * アロー関数
  */
@@ -41,6 +45,10 @@
 // console.log(func4(10, 20));
 
 /**
+ *
+ */
+
+/**
  * 分割代入
  */
 // const myProfile = {
@@ -64,10 +72,18 @@
 // console.log(message4);
 
 /**
+ *
+ */
+
+/**
  * デフォルト値、引数
  */
 // const SayHello = (name = "ゲスト") => console.log(`こんにちは、${name}さん`);
 // SayHello("じゃけぇ");
+
+/**
+ *
+ */
 
 /**
  * スプレッド構文
@@ -108,6 +124,10 @@
 // console.log(arr4);
 
 /**
+ *
+ */
+
+/**
  * mapやfilterを使った配列の処理
  */
 const nameArr = ["masaya", "kemmochi", "じゃけぇ"];
@@ -136,3 +156,28 @@ const nameArr = ["masaya", "kemmochi", "じゃけぇ"];
 //   }
 // });
 // console.log(newNameArr);
+
+/**
+ *
+ */
+
+/**
+ * 三項演算子
+ */
+// 条件 ? trueの処理 : falseの処理
+// const val1 = 1 > 0 ? "TRUE" : "FALSE";
+// console.log(val1);
+
+// const val2 = 1 < 0 ? "TRUE" : "FALSE";
+// console.log(val2);
+
+// const num = 1300;
+// num.toLocaleString() -> ３桁ごとにカンマ区切りにしてくれる
+
+// const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力してください';
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? '100を超えています' : '許容範囲ないです。';
+// }
+// console.log(checkSum(50,40));
