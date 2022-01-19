@@ -66,5 +66,5 @@
 /**
  * デフォルト値、引数
  */
-const SayHello = (name = "ゲスト") => console.log(`こんにちは、${name}さん`);
-SayHello("じゃけぇ");
+// const SayHello = (name = "ゲスト") => console.log(`こんにちは、${name}さん`);
+// SayHello("じゃけぇ");
