@@ -3,39 +3,46 @@
   <head>
     <title>TODO JS</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
     <!-- 入力エリア -->
-    <div>
-      <input type="text" placeholder="TODOを入力" />
-      <button>追加</button>
+    <div class="area input-area">
+      <input id="add-txt" type="text" placeholder="入力してください" />
+      <button id="add-btn">追加</button>
     </div>
 
-    <!-- 未完了のTODOエリア -->
-    <div>
-      <p>未完了のTODO</p>
-      <ul>
-        <li>
-          <div>
-            <p>TODOです</p>
-            <button>完了</button>
-            <button>削除</button>
-          </div>
+    <!-- 未完了エリア -->
+    <div class="area incomplete-area">
+      <h2 class="area__ttl">未完了のTODO</h2>
+      <ul id="incomplete-list">
+        <li class="list-row">
+          <p class="todo__ttl">あいうえお</p>
+          <button>完了</button>
+          <button>削除</button>
+        </li>
+        <li class="list-row">
+          <p class="todo__ttl">かきくけこ</p>
+          <button>完了</button>
+          <button>削除</button>
         </li>
       </ul>
     </div>
 
-    <!-- 完了済みTODOエリア -->
-    <div>
-      <p>完了したTODO</p>
+    <!-- 完了エリア -->
+    <div class="area complete-area">
+      <h2 class="area__ttl">完了したTODO</h2>
       <ul>
-        <li>
-          <p>TODOでした</p>
-          <button>戻す</button>
+        <li class="list-row">
+          <p class="todo__ttl">ABCDE</p>
+          <button>完了</button>
+          <button>削除</button>
         </li>
       </ul>
     </div>
+
+    <!-- JS読み込み -->
     <script src="src/todo.js"></script>
   </body>
 </html>
