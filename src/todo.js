@@ -15,10 +15,16 @@ const onClickAdd = () => {
   // button(完了)
   const completeBtn = document.createElement("button");
   completeBtn.innerText = "完了";
+  completeBtn.addEventListener("click", () => {
+    alert("完了");
+  });
 
   // button(削除)
   const deleteBtn = document.createElement("button");
   deleteBtn.innerText = "削除";
+  deleteBtn.addEventListener("click", () => {
+    alert("削除");
+  });
 
   // liの子要素に書く要素を設定
   li.appendChild(p);
