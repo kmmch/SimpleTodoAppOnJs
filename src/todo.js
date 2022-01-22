@@ -4,6 +4,21 @@ const onClickAdd = () => {
   const inputTxt = document.getElementById("add-txt").value;
   document.getElementById("add-txt").value = "";
 
+  createIncompleteList(inputTxt);
+};
+
+// 未完了リストから指定の要素を削除
+const deleteFromIncompleteList = (target) => {
+  document.getElementById("incomplete-list").removeChild(target);
+};
+
+// 完了リストから指定の要素を削除
+const deleteFromCompleteList = (target) => {
+  document.getElementById("complete-list").removeChild(target);
+};
+
+// 未完了リストに追加する関数
+const createIncompleteList = (text) => {
   // li生成
   const li = document.createElement("li");
   li.className = "list-row";
@@ -11,7 +26,7 @@ const onClickAdd = () => {
   // p生成
   const p = document.createElement("p");
   p.className = "todo__ttl";
-  p.innerText = inputTxt;
+  p.innerText = text;
 
   // button(完了)
   const completeBtn = document.createElement("button");
@@ -35,12 +50,21 @@ const onClickAdd = () => {
     p.innerText = todoTitle;
 
     // buttonタグ生成
-    const backButton = document.createElement("button");
-    backButton.innerText = "戻す";
+    const backBtn = document.createElement("button");
+    backBtn.innerText = "戻す";
+    backBtn.addEventListener("click", () => {
+      // 押された戻すボタンの親タグ(li)を完了リストから削除
+      deleteFromCompleteList(backBtn.parentNode);
+
+      // TODOのタイトルを取得
+      const todoBackTitle = backBtn.parentNode.firstElementChild.innerText;
+
+      createIncompleteList(todoBackTitle);
+    });
 
     // liタグの子要素に各要素を設定
     addTarget.appendChild(p);
-    addTarget.appendChild(backButton);
+    addTarget.appendChild(backBtn);
 
     // 完了リストに追加
     document.getElementById("complete-list").appendChild(addTarget);
@@ -61,11 +85,6 @@ const onClickAdd = () => {
 
   // 未完了のTODOのリストに追加
   document.getElementById("incomplete-list").appendChild(li);
-};
-
-// 未完了リストから指定の要素を削除
-const deleteFromIncompleteList = (target) => {
-  document.getElementById("incomplete-list").removeChild(target);
 };
 
 document
